@@ -1,0 +1,85 @@
+import { setGlobalLocale, readableDigitsXS, readableDigitsSM, readableDigitsMD, readableDigits, countUnits, divisionDigits, textToDigits, avoidExponentialNotation, dashNumbers, round, floor, ceil, beutifulRound, beutifulFloor, beutifulCeil } from './readableDigits.js'
+
+setGlobalLocale('ru')
+
+console.log(readableDigits(1000))
+console.log(readableDigits(10000))
+console.log(readableDigits(1000000))
+console.log(readableDigits(2100000))
+console.log(readableDigits(11000000))
+console.log(readableDigits(1234567890))
+console.log(readableDigits(1234567890123))
+console.log(readableDigits(1.222e15))
+console.log(readableDigits(1.222e18 + 2))
+console.log(readableDigits(1.222e21 + 2))
+
+console.log(readableDigitsSM(1000))
+console.log(readableDigitsSM(10000))
+console.log(readableDigitsSM(1000000))
+console.log(readableDigitsSM(2100000))
+console.log(readableDigitsSM(11000000))
+console.log(readableDigitsSM(1234567890))
+console.log(readableDigitsSM(1234567890123))
+console.log(readableDigitsSM(1.222e15))
+console.log(readableDigitsSM(1.222e18 + 2))
+console.log(readableDigitsSM(1.222e21 + 2))
+
+console.log(readableDigitsXS(10000))
+console.log(readableDigitsXS(1000000))
+console.log(readableDigitsXS(2100000))
+console.log(readableDigitsXS(11000000))
+console.log(readableDigitsXS(1234567890))
+console.log(readableDigitsXS(1234567890123))
+console.log(readableDigitsXS(1.222e15))
+console.log(readableDigitsXS(1.222e18 + 2))
+console.log(readableDigitsXS(1.222e21 + 2))
+
+console.log(readableDigitsXS(500, { withUnit: 1e3 }))
+console.log(readableDigitsXS(1e9, { withUnit: 1e3 }))
+console.log(readableDigitsXS(1e12, { withUnit: 1e3 }))
+console.log(readableDigitsXS(1e12, { withUnit: 1e6 }))
+
+console.log(readableDigitsMD(1e9, { locale: 'ru' }))
+console.log(readableDigitsMD(1e9, { locale: 'en' }))
+
+console.log(readableDigits(1e9, 'sm', { locale: 'ru' }))
+console.log(readableDigits(1e9, 'md', { locale: 'en' }))
+
+console.log(readableDigitsSM(1111111, { fractionDigits: 4 }))
+
+console.log(countUnits(1000))
+console.log(countUnits(10000))
+console.log(countUnits(11111))
+
+console.log(divisionDigits(1000000))
+console.log(divisionDigits(100123123123123))
+console.log(divisionDigits(1000000000, ','))
+
+console.log(dashNumbers([1,2,3,4,5, 100, 200,201,202,203]))
+console.log(dashNumbers([1,2,3,4,5, 100, 200,201,202,203], ' to ', ' and '))
+
+console.log(avoidExponentialNotation(1e21))
+
+console.log(round(1.55))
+console.log(round(1.55, 1))
+console.log(floor(1.99))
+console.log(floor(1.99, 1))
+console.log(ceil(1.01))
+console.log(ceil(1.019, 2))
+
+console.log(beutifulRound(111111))
+console.log(beutifulRound(111111, 2))
+console.log(beutifulFloor(111111))
+console.log(beutifulFloor(111111, 2))
+console.log(beutifulCeil(111111))
+console.log(beutifulCeil(111111, 2))
+
+console.log(textToDigits('user input: 10 тысяч'))
+console.log(textToDigits('1 миллион'))
+console.log(textToDigits('1.1 млн'))
+console.log(textToDigits('1.11 млн'))
+console.log(textToDigits('1.23 млрд'))
+console.log(textToDigits('1.23 трлн'))
+console.log(textToDigits('1.22 квадриллиона'))
+console.log(textToDigits('1.22 квинтиллионов'))
+console.log(textToDigits('1.22 секстиллионов'))
