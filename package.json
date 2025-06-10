@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/oleegarch/readable-digits#readme",
   "dependencies": {
-    "@oleegarch/plural-ru": "^1.0.0",
     "make-plural": "^7.4.0"
   }
 }
