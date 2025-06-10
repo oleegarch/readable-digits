@@ -2,27 +2,29 @@
   "name": "readable-digits",
   "version": "1.1.4",
   "description": "Make large numbers readable",
-  "main": "readableDigits.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oleegarch/readable-digits.git"
-  },
   "keywords": [
     "readable",
     "numbers",
     "digits",
     "humanize"
   ],
-  "author": "Oleg Mikhailov",
-  "license": "MIT",
+  "homepage": "https://github.com/oleegarch/readable-digits#readme",
   "bugs": {
     "url": "https://github.com/oleegarch/readable-digits/issues"
   },
-  "homepage": "https://github.com/oleegarch/readable-digits#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleegarch/readable-digits.git"
+  },
+  "license": "MIT",
+  "author": "Oleg Mikhailov",
+  "type": "commonjs",
+  "main": "readableDigits.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "make-plural": "^7.4.0"
-  }
+  },
+  "devDependencies": {}
 }
